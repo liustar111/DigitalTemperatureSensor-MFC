@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img">
+
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L9,3 L0,6 Z" fill="#334155"/>
+      </marker>
+      <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#475569" flood-opacity="0.16"/>
+      </filter>
+    </defs>
+    
+<rect x="0" y="0" width="1280" height="760" rx="0" fill="#F8FAFC" stroke="#F8FAFC" stroke-width="1.4" opacity="1"/>
+<text x="60" y="52" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="25" font-weight="700" fill="#0F172A" text-anchor="start" >核心原理图：PC 端 MFC + 串口 Modbus RTU + 数字温度传感器</text>
+<text x="60" y="82" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start" >核心链路是“配置参数 → 打开串口 → 周期读寄存器 → 校验解析 → 告警与历史记录”。</text>
+<rect x="70" y="130" width="340" height="500" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8" opacity="1"/>
+<text x="240" y="165" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#1D4ED8" text-anchor="middle" >PC 上位机 / MFC 程序</text>
+<rect x="105" y="200" width="270" height="70" rx="8" fill="#EFF6FF" stroke="#60A5FA" stroke-width="1.4" opacity="1"/>
+<text x="240.0" y="230.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >主对话框</text>
+<text x="240.0" y="249.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >CDigitaltemperaturesensorDlg</text>
+<rect x="105" y="300" width="270" height="70" rx="8" fill="#EFF6FF" stroke="#60A5FA" stroke-width="1.4" opacity="1"/>
+<text x="240.0" y="330.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >串口封装</text>
+<text x="240.0" y="349.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >CSerialPort: Open / Read / Write</text>
+<rect x="105" y="400" width="270" height="70" rx="8" fill="#EFF6FF" stroke="#60A5FA" stroke-width="1.4" opacity="1"/>
+<text x="240.0" y="430.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >配置与历史缓存</text>
+<text x="240.0" y="449.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >INI + vector&lt;TempRecord&gt;</text>
+<rect x="105" y="500" width="270" height="70" rx="8" fill="#EFF6FF" stroke="#60A5FA" stroke-width="1.4" opacity="1"/>
+<text x="240.0" y="530.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >历史窗口</text>
+<text x="240.0" y="549.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >HistData: List / Chart / CSV</text>
+<rect x="505" y="130" width="270" height="500" rx="10" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.8" opacity="1"/>
+<text x="640" y="165" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#0F766E" text-anchor="middle" >通信协议</text>
+<rect x="535" y="210" width="210" height="74" rx="8" fill="#F0FDFA" stroke="#14B8A6" stroke-width="1.4" opacity="1"/>
+<text x="640.0" y="242.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >读温度命令</text>
+<text x="640.0" y="261.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >Addr 03 0000 0001 CRC</text>
+<rect x="535" y="335" width="210" height="74" rx="8" fill="#F0FDFA" stroke="#14B8A6" stroke-width="1.4" opacity="1"/>
+<text x="640.0" y="367.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >传感器响应</text>
+<text x="640.0" y="386.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >Addr 03 02 Hi Lo CRC</text>
+<rect x="535" y="465" width="210" height="92" rx="8" fill="#F0FDFA" stroke="#14B8A6" stroke-width="1.4" opacity="1"/>
+<text x="640.0" y="506.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >解析规则</text>
+<text x="640.0" y="525.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >CRC16 通过后 raw / 10 = ℃</text>
+<rect x="880" y="130" width="330" height="500" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.8" opacity="1"/>
+<text x="1045" y="165" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#C2410C" text-anchor="middle" >数字温度传感器</text>
+<rect x="920" y="215" width="250" height="74" rx="8" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.4" opacity="1"/>
+<text x="1045.0" y="247.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >温度采样单元</text>
+<text x="1045.0" y="266.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >输出 0.1℃ 分辨率数据</text>
+<rect x="920" y="345" width="250" height="74" rx="8" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.4" opacity="1"/>
+<text x="1045.0" y="377.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >Modbus 从站寄存器</text>
+<text x="1045.0" y="396.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >0000H 温度值</text>
+<rect x="920" y="475" width="250" height="74" rx="8" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.4" opacity="1"/>
+<text x="1045.0" y="507.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >可写参数寄存器</text>
+<text x="1045.0" y="526.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >0013H 地址 / 0014H 波特率 / 0015H 校准</text>
+<path d="M375 335 C440 335, 475 248, 535 248" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+<path d="M745 248 C805 248, 850 248, 920 248" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+<text x="640" y="245" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F766E" text-anchor="middle" >请求帧</text>
+<path d="M920 382 C850 382, 805 372, 745 372" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+<path d="M535 372 C475 372, 440 335, 375 335" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+<text x="640" y="398" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F766E" text-anchor="middle" >响应帧</text>
+<line x1="640" y1="409" x2="640" y2="465" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M535 512 C470 512, 430 435, 375 435" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+<text x="452" y="490" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="13" font-weight="500" fill="#475569" text-anchor="middle" >温度与状态</text>
+<line x1="240" y1="270" x2="240" y2="300" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+<line x1="240" y1="370" x2="240" y2="400" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+<line x1="240" y1="470" x2="240" y2="500" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M375 535 C430 535, 455 610, 535 610" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+<rect x="535" y="590" width="210" height="58" rx="8" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" opacity="1"/>
+<text x="640.0" y="614.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >输出</text>
+<text x="640.0" y="633.5" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#172033" text-anchor="middle" >实时文本 / 状态栏 / 日志 / CSV</text>
+<path d="M920 512 C845 512, 815 512, 745 512" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<text x="815" y="500" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="13" font-weight="500" fill="#9333EA" text-anchor="middle" >参数写入 06H</text>
+<rect x="70" y="665" width="1140" height="54" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" opacity="1"/>
+<text x="90" y="697" font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="14" font-weight="500" fill="#334155" text-anchor="start" >关键保护：串口未打开不可采集；采集中禁止改通信参数；响应需检查长度、站号、功能码、字节数和 CRC；温度超界或通信失败写入状态与日志。</text>
+</svg>
